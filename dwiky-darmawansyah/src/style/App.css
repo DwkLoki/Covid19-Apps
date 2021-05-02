@@ -1,0 +1,13 @@
+/* .App {
+  text-align: center;
+} */
+
+.navbar {
+  font-size: medium;
+  margin-bottom: 10px;
+}
+
+.header {
+  background-color: rgb(45, 45, 45);
+  margin: 0;
+}
