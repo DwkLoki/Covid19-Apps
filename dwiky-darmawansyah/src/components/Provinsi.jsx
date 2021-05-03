@@ -28,22 +28,6 @@ const Provinsi = () => {
             setDataCovidProvinsi(data);
           }
         });
-        // setDataCovidProvinsi(response.data);
-        // console.log(response.data);
-        // const nameOfProvinsi = toTitle(params.namaProvinsi).toUpperCase()
-        // Map bakal return array
-        // const dataProvinsi = response.data.list_data.map(itemKey => {
-        //     if (itemKey.key === nameOfProvinsi) {
-        //         return itemKey
-        //     }
-        // })
-        // console.log(dataProvinsi);
-        // console.log(
-        //   response.data.list_data.map(
-        //     (itemKey) =>
-        //       itemKey.key === toTitle(params.namaProvinsi).toUpperCase()
-        //   )
-        // );
       } catch (err) {
         console.log(err);
       }
@@ -51,8 +35,6 @@ const Provinsi = () => {
 
     getDataCovidProvinsi();
   }, [params.namaProvinsi]);
-
-  // const listOfProvinsi = dataCovidProvinsi.list_data.map(itemKey => itemKey.key);
 
   // fungsi konversi ke Capitalize Each Word
   // function kapital(str) {
@@ -121,10 +103,10 @@ const Provinsi = () => {
             {dataCovidProvinsi && (
               <DataCovidBaru
                 dataCovidApp={{
-                  positif: dataCovidProvinsi.jumlah_kasus,
-                  dirawat: dataCovidProvinsi.jumlah_dirawat,
-                  sembuh: dataCovidProvinsi.jumlah_sembuh,
-                  meninggal: dataCovidProvinsi.jumlah_meninggal,
+                  positif: dataCovidProvinsi.penambahan.positif,
+                  dirawat: dataCovidProvinsi.penambahan.dirawat,
+                  sembuh: dataCovidProvinsi.penambahan.sembuh,
+                  meninggal: dataCovidProvinsi.penambahan.meninggal,
                 }}
               />
             )}
