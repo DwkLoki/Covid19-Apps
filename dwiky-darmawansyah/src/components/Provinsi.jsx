@@ -42,14 +42,16 @@ const Provinsi = () => {
             const response = await axios.get(url)
             setDataCovidProvinsi(response.data)
             // console.log(response.data);
-            const nameOfProvinsi = toTitle(params.namaProvinsi).toUpperCase()
-            const dataProvinsi = response.data.list_data.map(itemKey => {
-                if (itemKey.key === nameOfProvinsi) {
-                    return itemKey
-                }
-            })
-            console.log(dataProvinsi);
-            console.log(response.data.list_data.map(itemKey => itemKey.key === toTitle(params.namaProvinsi).toUpperCase()));
+            // setListOfProvinsi(response.data.list_data.map(itemKey => itemKey.key))
+            // console.log(response.data.list_data.map(itemKey => itemKey.key));
+            // const nameOfProvinsi = toTitle(params.namaProvinsi).toUpperCase()
+            // const dataProvinsi = response.data.list_data.map(itemKey => {
+            //     if (itemKey.key === nameOfProvinsi) {
+            //         return itemKey
+            //     }
+            // })
+            // console.log(dataProvinsi);
+            // console.log(response.data.list_data.map(itemKey => itemKey.key === toTitle(params.namaProvinsi).toUpperCase()));
         } catch (err) {
             console.log(err);
         }
