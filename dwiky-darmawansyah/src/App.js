@@ -85,7 +85,7 @@ function App() {
             <hr />
           </div>
         </Route>
-        <Route exact path="/provinsi">
+        <Route path="/provinsi">
           <DataCovidProvinsi />
         </Route>
       </Switch>
